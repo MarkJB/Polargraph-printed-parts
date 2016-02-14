@@ -1,8 +1,5 @@
-//Polargraph board feet
-
-//Mark Benson CCNC 2015
-
-//What sort of feet are these?
+//Polargraph Board Feet
+//Copyright Mark Benson 2016 CCNC 2016
 
 module cap()
 {

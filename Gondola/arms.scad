@@ -1,3 +1,6 @@
+//Polargraph Gondola Arms
+//Copyright Mark Benson 2016 CCNC 2016
+
 module hub()
 {
     difference()
@@ -160,5 +163,5 @@ module weightArm()
 
 //singleArm();
 //doubleArm();
-weightArm();
+//weightArm();
 //swingArmCollar();

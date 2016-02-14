@@ -1,3 +1,6 @@
+//Polargraph Gondola Parts
+//Copyright Mark Benson 2016 CCNC 2016
+
 //include <ISOThread.scad>
 //include <ISOThreadUM2.scad>
 
@@ -23,53 +26,46 @@ module penHolderShaftWithScrewHole()
     }
 }
 
+module penCollar()
+{
+    //push fit collar
+    difference()
+    {
+        cylinder(r=15/2,12,$fn=150);
+        #cylinder(r=12/2,12,$fn=6);
+    }
+    
+    //push fit collar stop
+    translate([0,0,10])
+    difference()
+    {
+        cylinder(r=19/2,2,$fn=150);
+        cylinder(r=12/2,2,$fn=50);
+    }    
+
+
+}   
+
+//penCollar();
+
 module penHolder()
 {
     union()
     {
+        translate([0,0,10])
         penHolderShaftWithScrewHole();
-        //thread_out_pitch((30-6),10.2,6,50);
-        /*translate([0,0,8])
-        difference()
-        {
-            cylinder(r=22/2, h=2, $fn=25);
-            cylinder(r=12/2, h=2, $fn=25);
-        }*/
+        penCollar();
     }
 }
 
-//translate([30,0,0])
+//translate([0,0,30])
 //penHolder();
-
-module penCollar()
-{
-    difference()
-    {
-        cylinder(r=30/2,10.2,$fn=150);
-        cylinder(r=(30-6)/2,10.2,$fn=50);
-    }
-    
-    difference()
-    {
-        translate([0,0,-5])
-        thread_in_pitch((30-6),30,6,50);
-    
-        translate([0,0,-20])
-        cylinder(r=20,h=20); 
-     
-        translate([0,0,10.2])
-        cylinder(r=20,h=20);    
-    }
-    
-    %cylinder(d=18,h=20);
-}   
-
-//penCollar();
 
 module gondola()
 {
     difference()
     {
+        //Stabilizing plate
         union()
         {
             difference()
@@ -93,7 +89,8 @@ module gondola()
         }
         
     }
-
+    
+    //Base collar
     difference()
     {
         cylinder(r=24/2,h=15,$fn=50);
@@ -121,18 +118,19 @@ module gondola()
         }
     }
     
+    //Arm pivot
     translate([0,0,15])
     difference()
     {
-        cylinder(r=20/2,h=10,$fn=150);
-        cylinder(r=15/2,h=10,$fn=50);
+        cylinder(r=20/2,h=16,$fn=150);
+        cylinder(r=15/2,h=16,$fn=50);
     }
 
-    translate([0,0,10+15])
-    penCollar();
+    //translate([0,0,10+15])
+    //penCollar();
     
+    //Servo plate
     translate([21,-21,0])
-    
     rotate([0,0,45])
     difference()
     {
@@ -151,10 +149,10 @@ module gondola()
 //Uncomment these to render each part
 //gondola();
 
-//penCollar();
-//penHolderShaft();
-penHolderShaftWithScrewHole();
-
 //translate([0,0,28])
-//penHolder();
+penHolder();
+
+
+
+
 

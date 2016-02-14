@@ -1,3 +1,6 @@
+//Polargraph Gondola Assembly
+//Copyright Mark Benson 2016 CCNC 2016
+
 //assembly
 
 include <arms.scad>
@@ -6,7 +9,7 @@ include <gondola.scad>
 gondola();
 
 color("GREEN")
-translate([0,0,28])
+translate([0,0,22])
 penHolder();
 
 color("BLUE")
