@@ -31,7 +31,7 @@ module penCollar()
     //push fit collar
     difference()
     {
-        cylinder(r=15/2,12,$fn=150);
+        cylinder(r=13.8/2,12,$fn=150);
         #cylinder(r=12/2,12,$fn=6);
     }
     
