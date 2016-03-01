@@ -31,7 +31,10 @@ module penCollar()
     //push fit collar
     difference()
     {
-        cylinder(r=13.8/2,12,$fn=150);
+        //This is supposed to be push fit with the main collar on the gondola.
+        //It works well on my printer but you may need to scale it for yours.
+        //You can scale it here by changing the radius or in your 3d printer software.
+        cylinder(r=14.1/2,12,$fn=150);
         #cylinder(r=12/2,12,$fn=6);
     }
     
