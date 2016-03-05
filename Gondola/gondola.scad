@@ -1,9 +1,6 @@
 //Polargraph Gondola Parts
 //Copyright Mark Benson 2016 CCNC 2016
 
-//include <ISOThread.scad>
-//include <ISOThreadUM2.scad>
-
 module penHolderShaft()
 {
     difference()
@@ -149,11 +146,15 @@ module gondola()
     }
 }
 
-//Uncomment these to render each part
+//Uncomment these to render each part - They are commented out so they don't appear twice in the assembly.scad file
+
+//gondola(); will render the main body
 //gondola();
 
-//translate([0,0,28])
-penHolder();
+//penHolder(); will render the pen holder
+//comment out the translate to make model sit at 0 z height
+//translate([0,0,22])
+//penHolder();
 
 
 
