@@ -1,5 +1,5 @@
 //Raspberry Pi board mount
-//CCBYNC Copyright Mark Benson 2016
+//CCBYNCSA Copyright Mark Benson 2016
 
 width=85;
 depth=56;
